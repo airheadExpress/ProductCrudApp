@@ -176,6 +176,7 @@ namespace ProductCrudApp.Repositories
             {
                 using (SqlConnection connection = new SqlConnection(connectionString)) 
                 {
+                    //Calculates Quantity and Price columns and sums up all of them.
                     connection.Open();
                     string sql = "SELECT SUM(QuantityInStock*Price) AS total FROM ProductTable;";
                     using (SqlCommand command = new SqlCommand(sql, connection)) 

@@ -41,6 +41,7 @@ namespace ProductCrudApp
             }
             //Shows the final output of the process.
             this.productsTable.DataSource = dataTable;
+            //This neat little trick saved me the trouble of creating an entirely new GUI.
             if (tval == null || tval == 0)
             {
                 this.lbltval.Text = "0";
@@ -85,6 +86,7 @@ namespace ProductCrudApp
 
         private void btnDeleteProd_Click(object sender, EventArgs e)
         {
+            //Checks if there's anything selected.
             var val = this.productsTable.SelectedRows[0].Cells[0].Value.ToString();
             if (val == null || val.Length == 0) return;
 

@@ -25,6 +25,7 @@ namespace ProductCrudApp
 
         public void EditProduct(Product product) 
         {
+            //Enters the selected information into the CreateEditForm GUI.
             this.Text = "Edit Product";
             this.lblTitle.Text = "Edit Product";
 
